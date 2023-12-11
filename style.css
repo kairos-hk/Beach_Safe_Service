@@ -1,7 +1,20 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Gothic:wght@400;800&display=swap');
+
+@media screen and (max-width: 450px){
+  .container{
+    min-height: 450px;
+  }
+}
+
+h2{
+  font-family: Nanum+Gothic;
+}
+
 a {
   text-decoration: none;
 }
+
 
 .search-container .suggestions-container {
   position: absolute;
@@ -160,12 +173,6 @@ input:focus {
   background-color: #fffff3;
 }
 
-.img-beach{
-  text-align: center;
-}
-.img-beach1{
-  width: 485px;
-}
 
 .frame {
   display: flex;

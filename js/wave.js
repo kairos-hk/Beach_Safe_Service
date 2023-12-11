@@ -1,22 +1,20 @@
-import {Point} from './point.js';
+import { Point } from './point.js';
 
 export class Wave {
   constructor(color) {
     this.color = color;
     this.points = [];
-    this.numberOfPoints = 6;
+    this.numberOfPoints = 4;
   }
 
   resize(stageWidth, stageHeight) {
-    this.stageWidth = stageWidth;
+    this.stageWidth = stageWidth; 
     this.stageHeight = stageHeight;
 
-    this.centerX = stageWidth / 2;
+    this.centerX = stageWidth;
     this.centerY = stageHeight / 2;
 
-
     this.pointGap = this.stageWidth / (this.numberOfPoints - 1);
-
 
     this.init();
   }
@@ -46,6 +44,7 @@ export class Wave {
         this.points[i].update();
       }
     }
+    
     ctx.lineTo(prevX, prevY);
     ctx.lineTo(this.stageWidth, this.stageHeight);
     ctx.lineTo(0, this.stageHeight);
@@ -53,7 +52,6 @@ export class Wave {
 
     ctx.fillStyle = '#4983F6';
     ctx.fill();
-
 
     ctx.closePath();
   }
